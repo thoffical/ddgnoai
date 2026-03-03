@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Redirecting…</title>
+  <meta http-equiv="refresh" content="0; url=https://thoffical.github.io/ddgnoai">
+</head>
+<body>
+<script>
+(function(){
+  // Read query parameter 'q' and redirect to GitHub Pages URL with q preserved.
+  const params = new URLSearchParams(location.search);
+  const q = params.get('q') || '';
+  const targetBase = 'https://thoffical.github.io/ddgnoai';
+  const target = q ? targetBase + '?q=' + encodeURIComponent(q) : targetBase;
+  // Use replace to avoid leaving this intermediate page in history
+  location.replace(target);
+})();
+</script>
+<noscript>
+  <p>Redirecting... <a id="redir" href="https://thoffical.github.io/ddgnoai">Continue</a></p>
+  <script> (function(){ const params = new URLSearchParams(location.search); const q = params.get('q') || ''; const target = q ? 'https://thoffical.github.io/ddgnoai?q=' + encodeURIComponent(q) : 'https://thoffical.github.io/ddgnoai'; document.getElementById('redir').href = target; })(); </script>
+</noscript>
+</body>
+</html>
