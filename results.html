@@ -10,8 +10,11 @@
 (function(){
   const params = new URLSearchParams(location.search);
   const q = params.get('q') || '';
+  const b = params.get('b') || '';
   const base = 'https://noai.duckduckgo.com/';
-  const target = q ? base + '?q=' + encodeURIComponent(q) : base;
+  const target = q
+    ? base + '?q=' + encodeURIComponent(q) + (b ? '&b=' + encodeURIComponent(b) : '')
+    : base;
   location.replace(target);
 })();
 </script>
@@ -21,9 +24,13 @@
     (function(){
       const params = new URLSearchParams(location.search);
       const q = params.get('q') || '';
-      document.getElementById('redir').href = q ? 'https://noai.duckduckgo.com/?q=' + encodeURIComponent(q) : 'https://noai.duckduckgo.com/';
+      const b = params.get('b') || '';
+      document.getElementById('redir').href = q
+        ? 'https://noai.duckduckgo.com/?q=' + encodeURIComponent(q) + (b ? '&b=' + encodeURIComponent(b) : '')
+        : 'https://noai.duckduckgo.com/';
     })();
   </script>
 </noscript>
 </body>
 </html>
+
